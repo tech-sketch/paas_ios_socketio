@@ -25,7 +25,7 @@ PaaS
 * iPad 3rd(MC705J)
 * XCode v4.5.2
 * iOS v6.0.1(10A523)
-* [AZSocketIO](https://github.com/pashields/AZSocketIO) v0.0.3
+* [AZSocketIO](https://github.com/pashields/AZSocketIO) v0.0.4
 * [SocketRocket](https://github.com/square/SocketRocket) v0.2.0
 * [AFNetworking](https://github.com/AFNetworking/AFNetworking) v1.1.0
 
