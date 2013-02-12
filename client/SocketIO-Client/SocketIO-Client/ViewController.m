@@ -50,10 +50,11 @@
     _socketIO = [[AZSocketIO alloc] initWithHost:HOST andPort:PORT secure:NO];
     _socketIO.transport = [NSMutableSet setWithObject:PROTOCOL];
     _socketIO.reconnect = NO;
+    __weak ViewController *blockself = self;
     [_socketIO setEventRecievedBlock:^(NSString *eventName, id data) {
         if ([eventName isEqualToString:RECV_KEY]) {
             NSString *received = [data objectAtIndex:0];
-            self.msgArea.text = [self.msgArea.text stringByAppendingFormat:@"%@\n", received];
+            blockself.msgArea.text = [blockself.msgArea.text stringByAppendingFormat:@"%@\n", received];
         }
     }];
     [_socketIO connectWithSuccess:^(void){
